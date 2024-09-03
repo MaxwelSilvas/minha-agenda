@@ -1,10 +1,8 @@
-// src/components/ContactForm/index.tsx
 import React, { useState, forwardRef } from "react";
 import { useDispatch } from "react-redux";
 import { addContact } from "../../redux/contactsSlice";
 import { Button, Form, Input } from "./styles";
 
-// Contador global para os IDs dos contatos
 let idCounter = 1;
 
 const ContactForm = forwardRef<HTMLFormElement, {}>((props, ref) => {
@@ -16,7 +14,7 @@ const ContactForm = forwardRef<HTMLFormElement, {}>((props, ref) => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     const newContact = {
-      id: idCounter++, // Usando o contador para IDs únicos
+      id: idCounter++,
       name,
       email,
       phone,
@@ -29,9 +27,8 @@ const ContactForm = forwardRef<HTMLFormElement, {}>((props, ref) => {
 
   return (
     <>
-
       <Form ref={ref} onSubmit={handleSubmit}>
-      <h1>Cadastrar Contato</h1>
+        <h1>Cadastrar Contato</h1>
         <Input
           type="text"
           placeholder="Nome completo"

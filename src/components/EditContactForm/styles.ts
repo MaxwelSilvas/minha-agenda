@@ -1,4 +1,3 @@
-// src/components/EditContactForm/styles.ts
 import styled from 'styled-components';
 
 export const Form = styled.form`
@@ -15,12 +14,25 @@ export const Input = styled.input`
 export const Button = styled.button`
   padding: 8px;
   font-size: 1rem;
-  background-color: #007bff;
+  background-color: #282c34;
   color: white;
   border: none;
   cursor: pointer;
 
   &:hover {
-    background-color: #0056b3;
+    background-color: #07783a;
+  }
+`;
+
+export const ButtonCancel = styled.button`
+  padding: 8px;
+  font-size: 1rem;
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  cursor: pointer;
+
+  &:hover {
+    background-color: red;
   }
 `;

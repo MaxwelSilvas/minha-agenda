@@ -1,7 +1,6 @@
-// src/components/EditContactForm/index.tsx
 import React, { useState } from "react";
 import { Contact } from "../../redux/contactsSlice";
-import { Button, Form, Input } from "./styles";
+import { Button, ButtonCancel, Form, Input } from "./styles";
 
 interface EditContactFormProps {
   contact: Contact;
@@ -48,9 +47,9 @@ const EditContactForm: React.FC<EditContactFormProps> = ({
         required
       />
       <Button type="submit">Salvar</Button>
-      <Button type="button" onClick={onCancel}>
+      <ButtonCancel type="button" onClick={onCancel}>
         Cancelar
-      </Button>
+      </ButtonCancel>
     </Form>
   );
 };
